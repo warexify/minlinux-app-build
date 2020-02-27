@@ -3,7 +3,7 @@ pool:
 steps:
 - script: |
    echo 'Clone Pengwin repository azure_pipelines branch'
-   git clone -b azure_pipelines https://github.com/WhitewaterFoundry/Pengwin $(System.DefaultWorkingDirectory)\Pengwin
+   git clone -b azure_pipelines https://github.com/warexify/Pengwin $(System.DefaultWorkingDirectory)\Pengwin
    
   displayName: 'Clone Pengwin repository to working folder '
 
@@ -11,7 +11,7 @@ steps:
   displayName: 'Download Pengwin rootfs images to working folder'
   inputs:
     connection: 'github connection'
-    userRepository: 'WhitewaterFoundry/pengwin-rootfs-builds'
+    userRepository: 'warexify/pengwin-rootfs-builds'
     itemPattern: '*.tar.gz'
     downloadPath: '$(System.DefaultWorkingDirectory)'
 
